@@ -76,3 +76,69 @@
 .usa-alert-no_icon {
  background-image: none; 
 }
+
+.alert {
+    color: #333 !important;
+    font-size: 1.4rem;
+    border-radius: 0;
+    position: relative;
+    margin: 20px 0 !important;
+
+  h3 {
+        font-size: 2.4rem;
+        font-weight: $font-bold;
+        margin: 0 0 5px 48px;
+    }
+
+  h5 {
+        margin:10px 0 12px;
+    }
+
+  p, ul {
+        margin: 5px 0 5px 48px;
+    }
+
+  .usa-da-icon {
+        width: 3.4rem;
+        height: 3.4rem;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+.alert-success {
+    background: #e7f4e4;
+    svg {
+        fill: #5cb85c;
+    }
+}
+
+.alert-info {
+    background: #e1f3f8;
+    svg {
+        fill: #5bc0de;
+    }
+}
+
+.alert-warning {
+    background: #fff1d2;
+    svg {
+        fill: #f0ad4e;
+    }
+}
+
+.alert-danger, .alert-error {
+    background: #f9dede;
+    .usa-da-icon {
+      svg{
+          fill: #d9534f;
+          }
+        }
+    }
+
+.alert-block{
+    border: 1px solid #ccc;
+    padding: 15px 15px 0;
+}
+

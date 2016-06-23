@@ -1,6 +1,7 @@
-@import './common';
-
 // ***** GLOBAL
+@import './global/shared';
+@import './global/content';
+@import './global/navigation';
 @import './global/header';
 @import './global/footer';
 
@@ -15,7 +16,3 @@
 @import './pages/submissionGuide';
 @import './pages/reviewData';
 @import './pages/crossFile';
-
-
-// ***** COMPONENTS
-@import './components/datepicker/datepicker';

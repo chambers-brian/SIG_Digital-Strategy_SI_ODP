@@ -1,0 +1,167 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2 {
+    font-family: $font-sans;
+    color: #555;
+    margin-bottom: $base-line-height;
+}
+
+.display-1 {
+    font-weight: $font-bold;
+    font-size: 5.9rem;
+    line-height: 1.45;
+}
+
+.display-2 {
+    font-weight: $font-light;
+    font-size: 4.4rem;
+    line-height: 5.7rem;
+}
+
+h1 {
+    font-weight: $font-light;
+    font-size: 5.9rem;
+    margin-bottom: $base-line-height * 1.625;
+}
+
+h2 {
+    font-weight: $font-light;
+    font-size: 4.7rem;
+    margin-bottom: $base-line-height;
+    line-height: 1.11;
+}
+
+h3 {
+    font-weight: $font-light;
+    font-size: 3.8rem;
+    line-height: 1.36;
+}
+
+h4 {
+    font-weight: $font-light;
+    font-size: 3.0rem;
+    line-height: 1;
+}
+
+h5 {
+    font-weight: $font-bold;
+    font-size: 2.4rem;
+    line-height: 1.3;
+}
+
+h6 {
+    font-weight: $font-bold;
+    font-size: 1.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+@mixin para {
+    font-weight: $font-normal;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: #525252;
+    max-width: 70rem;
+}
+
+p {
+    @include para;
+    &.italic {
+        font-style: italic;
+    }
+    &.lead {
+        font-weight: $font-normal;
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+    }
+
+    &.large {
+        font-weight: $font-normal;
+        font-size: 1.8rem;
+        line-height: $base-line-height;
+    }
+
+    &.small {
+        font-size: 90%;
+        line-height: 2.4rem;
+    }
+
+    &.strong{
+        font-weight: 600;
+    }
+}
+
+.highlight{
+	background-color: $color-gold-lightest;
+	padding: 8px 15px;
+}
+
+ul li{
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+}
+
+p + h2, p + h3, p + h4, p + h5, p + h6,{
+   margin-top: $base-line-height * 3;
+}
+
+ul + h2, ul + h3, ul + h4, ul + h5, ul + h6,{
+   margin-top: $base-line-height * 3;
+}
+
+h2 + .row {
+    margin-bottom: $base-line-height * 3;
+}
+
+table + p {
+    margin-top: 3.0rem;
+}
+
+ul.no-bullet{
+    list-style-type: none;
+    padding: 0;
+    & li{
+        margin: 0!important;
+        &:before{
+        	display: none;
+        }
+    }
+}
+
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+table,
+fieldset,
+figure,
+pre {
+  margin-bottom: $base-line-height;
+  color: #525252;
+}
+
+
+.text-success {
+	color:$color-green-light;
+}
+
+.text-danger{
+	color:$color-secondary-dark;
+}
+
+.text-warning{
+	color: $color-gold-light;
+}
+
+.usa-da-content-dark {
+    & .display-1, .display-2, h1, h2, h3, h4, h5, h6, ul{
+        color: $color-white;
+    }
+}

@@ -1,0 +1,159 @@
+@mixin list-row($height, $line-height) {
+	height: $height;
+	line-height: $line-height;
+    display: inline-block;
+    &:first-child {
+        padding-left: 0
+    }
+    &:last-child {
+        border-right: none;
+        padding-right: 0;
+    }
+    &:before {
+        display: none;
+    }
+}
+
+.usa-da-table {
+    &.table,
+    &.table-bordered {
+        width: 100%;
+        & thead {
+            font-size: 1.4rem;
+            font-weight: $font-bold;
+            & tr {
+                & th {
+                    padding: 16px 15px;
+                    border-bottom: none;
+                    position: relative;
+                    @media(max-width:$medium-screen) {
+                    	padding: 16px 10px;
+                    }
+                }
+            }
+        }
+        & tbody {
+            & tr {
+                & td {
+                    padding: 15px;
+                    font-size: 1.4rem;
+                    color: $color-gray;
+                    @media(max-width:$medium-screen) {
+                    	padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.usa-da-table {
+    &.table-bordered {
+        & thead {
+            color: $color-white;
+            background: $color-gray;
+        }
+    }
+}
+
+.usa-da-table {
+    &.table {
+        & thead {
+            color: #212121;
+            background: $color-gray-lightest;
+            & tr {
+                & th {
+                    border-bottom: none;
+                    vertical-align: middle;
+                }
+            }
+        }
+        & tbody {
+            & tr {
+                &:last-child {
+                    border-bottom: 1px solid #ddd;
+                }
+                & td {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.usa-da-formatted-table {
+    
+    .usa-da-table-header {
+        table {
+            margin-bottom: 0px;
+        }
+    }
+}
+.usa-da-scrollable-table {
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+    & .usa-da-scrollable-table-header{
+    	background: $color-gray;
+    	& .table-bordered {
+       		border: none;
+       		width: 100%;
+       		& thead > tr{
+       			border:none;
+       			& > th{
+       				border:none;
+       				border-right: 1px solid #ddd;
+       				&:last-child{
+       					border-right:none;
+       					& .usa-da-table-sorter{
+       						width: 50px;
+       					}
+       				}
+       			}
+    		}
+    	}
+    }
+    & table {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        margin: 0;
+    }
+    .usa-da-scrollable-table-content {
+        max-height: 250px;
+        display: block;
+        overflow-y: scroll;
+        & tr:last-child {
+            & td {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.usa-da-table-sorter {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    height: 100%;
+    width: 33px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & .usa-da-icon {
+    	height: 2.4rem;
+    	width: 2.2rem;
+    	& svg{
+    		fill: $color-white;
+    	}
+    	&.active{
+    		& svg{
+    			fill:$color-gold-lighter;
+    		}
+    	}
+    	&.sort-icon {
+    	    cursor: pointer;
+            flex: 0 1 auto;
+    	}
+    }
+}

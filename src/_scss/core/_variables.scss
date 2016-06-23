@@ -16,6 +16,9 @@ $base-line-height:    2.4rem;
 $heading-line-height: 1.3;
 $lead-line-height:    1.7;
 
+$header-height: 11rem;
+$top-header-height: 3.1rem;
+
 $font-sans:           'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
 $font-serif:          'Merriweather', 'Georgia', 'Times New Roman', serif;
 
@@ -72,6 +75,7 @@ $color-cool-blue-lightest:   #dce4ef; // lighten($color-cool-blue, 90%)
 $color-focus:                $color-primary-alt-dark;
 $color-visited:              #4c2c92;
 
+$color-darkest: #2C333B;
 
 // Mobile First Breakpoints
 $small-screen:      768px;
@@ -90,3 +94,8 @@ $button-border-radius: 0;
 $box-shadow:        0 0 2px rgba(#000, .3);
 $focus-shadow:      0 0 3px $color-focus, 0 0 7px $color-focus;
 $grid-margins:      3rem;
+
+$width-nav-sidebar:  250px;
+$color-grid-dark:    #727272;
+$color-grid-light:   #e3e4e5;
+$site-top:           124px;
