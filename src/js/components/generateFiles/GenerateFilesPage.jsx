@@ -52,7 +52,7 @@ export default class GenerateFilesPage extends React.Component {
 
 		return (
 			<div className="usa-da-generate-files-page">
-                <Navbar activeTab="submissionGuide"/>
+                <Navbar activeTab="newSubmission"/>
                 <AddDataHeader submissionID={this.props.params.submissionID} />
                 <div className="usa-da-content-step-block" name="content-top">
                     <div className="container center-block">
