@@ -215,7 +215,7 @@ export default class AddDataMeta extends React.Component {
                                         </ReactCSSTransitionGroup>
                                     </div>
                                     <div className="usa-da-guide-link">
-                                        <a href="#/submissionGuide?force=true">View Submission Guide</a>
+                                        <a href="#/submissionGuide">View Submission Guide</a>
                                     </div>
                                 </div>
                             </div>
