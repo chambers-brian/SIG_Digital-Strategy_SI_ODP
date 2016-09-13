@@ -137,6 +137,15 @@ const routeDefinitions = {
             }
         },
         {
+            path: 'resumeSubmission/:submissionID',
+            onEnter: checkUserPermissions,
+            getComponent(nextState, cb) {
+                require.ensure([], (require) => {
+                    cb(null, require('../../containers/validateData/ValidateDataRedirectContainer.jsx').default)
+                });
+            }
+        },
+        {
             path: 'validateData/:submissionID',
             onEnter: checkUserPermissions,
             getComponent(nextState, cb) {

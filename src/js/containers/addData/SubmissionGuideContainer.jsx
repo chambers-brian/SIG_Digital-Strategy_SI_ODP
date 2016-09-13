@@ -26,7 +26,9 @@ class SubmissionGuideContainer extends React.Component {
                 this.sendToAddData();
             })
             .catch((err) => {
-                // TODO: Figure out how to handle errors
+                // don't care about errors
+                this.props.setSkipGuide(skip_guide);
+                this.sendToAddData();
             });
     }
 
