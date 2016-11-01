@@ -73,13 +73,14 @@ export default class RegisterEmailBanner extends React.Component {
 
     submitEmail() {
         this.setState({
+
             disabled: true,
             buttonText: 'Submitting...'
         });
         LoginHelper.registerEmail(this.state.email)
             .then(() => {
                 this.setState({
-                    text: 'An email has been sent to this address. Please follow the link within this email to verify your email address. Check your spam folder for messages from the DATA Act Broker if you don\'t receive an email shortly.',
+                    text: 'An email has been sent to this address. Please follow the link within this email to verify your email address. Check your spam folder for messages from the SEC Broker if you don\'t receive an email shortly.',
                     buttonText: 'Submitted!',
                     success: true,
                     error: false
@@ -140,7 +141,7 @@ export default class RegisterEmailBanner extends React.Component {
                             <div className="col-md-5 usa-da-login-container">
                                 <div className="row">
                                     <div className="col-xs-12">
-                                        <p className="msg">A .gov or .mil email address is preferred when registering for access to the DATA Act Broker. If you do not have a .gov or .mil email address, you may be required to provide an appropriate agency point of contact to verify your registration.</p>
+                                        <p className="msg">A .gov or .mil email address is preferred when registering for access to the SEC Broker. If you do not have a .gov or .mil email address, you may be required to provide an appropriate agency point of contact to verify your registration.</p>
                                     </div>
                                 </div>
                                 <form onKeyPress={this.handleKeyPress.bind(this)}>

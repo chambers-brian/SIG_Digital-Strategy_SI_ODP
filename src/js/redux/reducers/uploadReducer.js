@@ -6,6 +6,7 @@ const initialUploadState = {
 	id: null,
 	meta: {
 		agency: '',
+		test_column: 'testing123',
 		startDate: null,
 		endDate: null
 	},

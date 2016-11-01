@@ -8,6 +8,8 @@ const commands = {
 			.setValue('@appropriationsUpload', path.resolve(__dirname, '../uploads', globals.files[index].appropriations))
 			.setValue('@programActivityUpload', path.join(__dirname, '../uploads', globals.files[index].programActivity))
 			.setValue('@awardFinancialUpload', path.join(__dirname, '../uploads', globals.files[index].awardFinancial))
+			.setValue('@derivativeUpload', path.join(__dirname, '../uploads', globals.files[index].derivative))
+			.setValue('@nonDerivativeUpload', path.join(__dirname, '../uploads', globals.files[index].nonDerivative))
 			.setValue('@awardUpload', path.join(__dirname, '../uploads', globals.files[index].award));
 	}
 }
@@ -33,6 +35,12 @@ module.exports = {
 		},
 		awardUpload: {
 			selector: "div[data-testid='upload-award'] input"
+		},
+		derivativeUpload: {
+			selector: "div[data-testid='upload-derivative'] input"
+		},
+		nonDerivativeUpload: {
+			selector: "div[data-testid='upload-non_derivative'] input"
 		},
 		uploadButton: {
 			selector: "button[data-testid='upload']"

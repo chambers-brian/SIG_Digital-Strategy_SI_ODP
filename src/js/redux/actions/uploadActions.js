@@ -28,6 +28,7 @@ export const setMeta = (state) => ({
 		agency: state.agency,
 		startDate: state.startDate,
 		endDate: state.endDate,
+		test_column: state.test_column,
 		dateType: state.dateType
 	}
 })

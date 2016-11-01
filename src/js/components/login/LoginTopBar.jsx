@@ -15,9 +15,9 @@ export default class LoginTopBanner extends React.Component {
                             <div className="col-xs-1">
                                 <i className="usa-da-icon"><Icons.ExclamationTriangle /> </i>
                             </div>
-                            <div className="col-xs-11">
-                                <p>This site is not intended to be an official resource for federal spending data. To submit official federal spending data, please visit <a href="http://www.USAspending.gov" target="_blank">USAspending.gov</a>.</p>
-                            </div>
+                            //<div className="col-xs-11">
+                            //    <p>This site is not intended to be an official resource for federal spending data. To submit official federal spending data, please visit <a href="http://www.USAspending.gov" target="_blank">USAspending.gov</a>.</p>
+                            //</div>
                         </div>
                     </div>
                 </div>

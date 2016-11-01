@@ -34,7 +34,7 @@ export default class CrossFileOverlay extends React.Component {
 
 	pressedNext(e) {
 		e.preventDefault();
-		hashHistory.push('/generateEF/' + this.props.submission.id);
+		hashHistory.push('/reviewData/' + this.props.submission.id);
 	}
 
 	isUploadingFiles() {
@@ -96,7 +96,7 @@ export default class CrossFileOverlay extends React.Component {
 		if (Object.keys(this.props.submission.crossFile).length == 0) {
 			icon = <Icons.CheckCircle />;
 			iconClass = 'usa-da-successGreen';
-			message = 'Your files have been successfully cross-validated. Click Next to generate files E and F.';
+			message = 'Your files have been successfully cross-validated. Click Next for the Summary.';
 			uploadButtonDisabled = true;
 			uploadButtonClass = '-disabled';
 			nextButtonClass = ' btn-primary';

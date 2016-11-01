@@ -223,6 +223,8 @@ const prepareMetadata = (metadata, request) => {
     request.reporting_period_start_date = metadata.startDate;
     request.reporting_period_end_date = metadata.endDate;
     request.is_quarter = false;
+    request.test_column = "testing123";
+
     if (metadata.dateType == "quarter") {
         request.is_quarter = true;
     }

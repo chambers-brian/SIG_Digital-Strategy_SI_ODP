@@ -28,20 +28,21 @@ export default class AddDataMeta extends React.Component {
     constructor(props) {
         super(props);
 
-        this.successMessage = 'Everything looks good. Now let\'s work on uploading your .CSV files.';
+        //this.successMessage = 'Everything looks good. Now let\'s work on uploading your .CSV files.';
 
         this.state = {
             agency: "",
             startDate: null,
             endDate: null,
+            test_column: "testing123",
             dateType: null,
             startDateError: false,
             endDateError: false,
             agencyError: false,
             showDateTypeField: false,
             showDateRangeField: false,
-            showSubmitButton: false,
-            buttonDisabled: true,
+            showSubmitButton: true,
+            buttonDisabled: false,
             message: this.successMessage
         };
     }
@@ -74,6 +75,7 @@ export default class AddDataMeta extends React.Component {
         this.setState({
             startDate: startDate,
             endDate: endDate,
+            test_column: "testing123",
             message: message,
             buttonDisabled: buttonDisabled
         }, () => {
@@ -190,30 +192,45 @@ export default class AddDataMeta extends React.Component {
                                 <h5>Please begin by telling us about the submission you'll be creating</h5>
                                 <div className="meta-holder">
                                     <div className="row usa-da-add-data-meta-label">
-                                        Which agency is this submission for?
+                                        Form 3 Submission Form
                                     </div>
                                     
+                                    
+                                    <div className="row">
+                                        <div className="col-sm-12 col-md-12 typeahead-holder">
+                                            <input type="text" name="reporterName" placeholder="Enter the full name of of the reporting person" />
+                                            <input type="text" name="eventDate" placeholder="Enter the Date of Event Requiring Statement (Month/Day/Year)" />
+                                            <input type="text" name="issuerName" placeholder="Enter the Issuer Name and Ticker or Trading Symbol" />
+                                            <input type="text" name="relationship" placeholder="Enter the Relationship of Reporting Person(s) to Issuer (e.g. Director, 10% Owner, Officer)" />
+                                            <input type="text" name="ifAmendment" placeholder="Enter If Amendment, Date Original Filed (Month/Day/Year)" />
+                                            <input type="text" name="groupFiling" placeholder="Enter the Individual or Joint/Group Filing" />
+
+                                        </div>
+                                    </div>
+
                                     <div className="row">
                                         <div className="col-sm-12 col-md-12 typeahead-holder" data-testid="agencytypeahead">
-                                            <AgencyListContainer placeholder="Enter the name of the reporting agency" onSelect={this.handleChange.bind(this)} customClass={agencyClass} />
+                                            <AgencyListContainer placeholder="Enter the name of the reporting company" onSelect={this.handleChange.bind(this)} customClass={agencyClass} />
                                                 <div className={"usa-da-icon usa-da-form-icon" + agencyClass}>
                                                     {agencyIcon}
                                                 </div>
-                                            </div>
-                                        </div>
-                                
-                                        <ReactCSSTransitionGroup transitionName="usa-da-meta-fade" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-                                            {dateTypeField}
-                                        </ReactCSSTransitionGroup>
-    
-                                        <ReactCSSTransitionGroup transitionName="usa-da-meta-fade" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-                                            {dateRangeField}
-                                        </ReactCSSTransitionGroup>
-    
-                                        <ReactCSSTransitionGroup transitionName="usa-da-meta-fade" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-                                            {submissionComponent}
-                                        </ReactCSSTransitionGroup>
+                                         </div>
                                     </div>
+                            
+                                    <ReactCSSTransitionGroup transitionName="usa-da-meta-fade" transitionEnterTimeout={0} transitionLeaveTimeout={0}>
+                                        {dateTypeField}
+                                    </ReactCSSTransitionGroup>
+
+                                    <ReactCSSTransitionGroup transitionName="usa-da-meta-fade" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+                                        {dateRangeField}
+                                    </ReactCSSTransitionGroup>
+
+                                    <ReactCSSTransitionGroup transitionName="usa-da-meta-fade" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+                                        {submissionComponent}
+                                    </ReactCSSTransitionGroup>
+
+                                </div>
+
                                     <div className="usa-da-guide-link">
                                         <a href="#/submissionGuide?force=true">View Submission Guide</a>
                                     </div>

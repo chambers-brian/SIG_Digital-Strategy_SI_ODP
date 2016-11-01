@@ -98,10 +98,10 @@ export default class ReviewDataContent extends React.Component {
     render() {
         
         // The first parameter in each of these arrays is the corresponding class for the SVG icon
-        const buttonContent = [[<Icons.CheckCircle />,'Publish this data to USAspending.gov'],
-                                [<Icons.ShareSquare />,'Send this data to another Data Broker user'],
+        const buttonContent = [[<Icons.CheckCircle />,'Publish this data to SEC.gov'],
+                                [<Icons.ShareSquare />,'Send this data to another SEC Broker user'],
                                 [<Icons.CloudDownload />,'Download this data to your computer'],
-                                [<Icons.Trash />,'Delete this data from the Data Broker']];
+                                [<Icons.Trash />,'Delete this data from the SEC Broker']];
 
         let buttons = [];
         for (let i = 0; i < buttonContent.length; i++){
@@ -173,7 +173,7 @@ export default class ReviewDataContent extends React.Component {
                                             <Icons.Globe />
                                         </div>
                                         <div className="button-content">
-                                            Certify & Publish the Submission to USAspending.gov
+                                            Certify & Publish the Submission to SEC.gov
                                         </div>
                                     </div>
                                 </button>

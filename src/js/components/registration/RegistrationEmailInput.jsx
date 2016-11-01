@@ -16,7 +16,7 @@ export default class RegistrationEmailInput extends React.Component {
 				<label className="sr-only" htmlFor="input-registration-email">Registration Email</label>
 				<EmailValidation
 	                  id="registrationEmail"
-	                  placeholder="Please enter your .gov or .mil email address"
+	                  placeholder="Please enter your company email address"
 	                  regex={emailRegex}
 	                  buttonDisabled={this.props.setButtonDisabled}
 	                  onChange={this.props.onChange}
